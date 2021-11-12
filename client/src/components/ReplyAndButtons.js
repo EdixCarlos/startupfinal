@@ -64,7 +64,7 @@ const ReplyAndButtons = ({ isMobile, reply, postId, commentId, user }) => {
               size="small"
               className={classes.cancelBtn}
             >
-              Cancel
+              Cancelar
             </Button>
             <Button
               onClick={handleEditReply}
@@ -88,7 +88,7 @@ const ReplyAndButtons = ({ isMobile, reply, postId, commentId, user }) => {
             className={classes.btnStyle}
             onClick={() => setEditOpen((prevState) => !prevState)}
           >
-            Edit
+            Editar
           </Button>
           <DeleteDialog type="comment" handleDelete={handleReplyDelete} />
         </div>

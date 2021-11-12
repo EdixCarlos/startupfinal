@@ -84,7 +84,7 @@ const CommentAndButtons = ({ isMobile, comment, postId, user }) => {
               size="small"
               className={classes.cancelBtn}
             >
-              Cancel
+              Cancelar
             </Button>
             <Button
               onClick={handleEditComment}
@@ -108,7 +108,7 @@ const CommentAndButtons = ({ isMobile, comment, postId, user }) => {
             className={classes.btnStyle}
             onClick={() => setReplyOpen((prevState) => !prevState)}
           >
-            Reply
+            Respuesta
           </Button>
         )}
         {user && user.id === comment.commentedBy.id && (
@@ -120,7 +120,7 @@ const CommentAndButtons = ({ isMobile, comment, postId, user }) => {
               className={classes.btnStyle}
               onClick={() => setEditOpen((prevState) => !prevState)}
             >
-              Edit
+              Editar
             </Button>
             <DeleteDialog type="comment" handleDelete={handleCommentDelete} />
           </>
@@ -148,7 +148,7 @@ const CommentAndButtons = ({ isMobile, comment, postId, user }) => {
               size="small"
               className={classes.cancelBtn}
             >
-              Cancel
+              Cancelar
             </Button>
             <Button
               onClick={handlePostReply}
@@ -158,7 +158,7 @@ const CommentAndButtons = ({ isMobile, comment, postId, user }) => {
               size="small"
               disabled={submitting}
             >
-              {submitting ? 'Replying' : 'Reply'}
+              {submitting ? 'Respondiendo' : 'Responder'}
             </Button>
           </div>
         </div>

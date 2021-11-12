@@ -165,7 +165,7 @@ const CommentsDisplay = ({ comments, postId, isMobile }) => {
           <TimeAgo datetime={new Date(comment.createdAt)} />
           {comment.createdAt !== comment.updatedAt && (
             <em>
-              {' • edited'} <TimeAgo datetime={new Date(comment.updatedAt)} />
+              {' • Editado'} <TimeAgo datetime={new Date(comment.updatedAt)} />
             </em>
           )}
         </Typography>
@@ -233,10 +233,10 @@ const CommentsDisplay = ({ comments, postId, isMobile }) => {
         <div className={classes.noCommentsBanner}>
           <ForumIcon color="primary" fontSize="large" />
           <Typography variant="h5" color="secondary">
-            No Comments Yet
+            No hay comentarios aun
           </Typography>
           <Typography variant="h6" color="secondary">
-            Be the first to share what you think!
+          ¡Sé el primero en compartir lo que piensas!
           </Typography>
         </div>
       )}

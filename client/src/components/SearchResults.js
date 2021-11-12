@@ -46,7 +46,7 @@ const SearchResults = () => {
     return (
       <Container disableGutters>
         <Paper variant="outlined" className={classes.mainPaper}>
-          <LoadingSpinner text={'Searching for matches...'} />
+          <LoadingSpinner text={'Buscando coincidencias...'} />
         </Paper>
       </Container>
     );
@@ -73,7 +73,7 @@ const SearchResults = () => {
             className={classes.infoPaper}
           >
             <SearchIcon fontSize="large" style={{ marginRight: '7px' }} />
-            Showing search results for "{query}"
+            Mostrando resultados de búsqueda para "{query}"
           </Typography>
         </Paper>
         {searchResults.results.length !== 0 ? (
@@ -91,7 +91,7 @@ const SearchResults = () => {
               className={classes.sorryIcon}
               color="primary"
             />
-            Sorry, there were no post results for "{query}"
+            Lo sentimos, no hubo resultados de publicaciones para "{query}"
           </Typography>
         )}
         {'next' in searchResults && (

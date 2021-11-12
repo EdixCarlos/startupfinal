@@ -17,7 +17,7 @@ import AddIcon from '@material-ui/icons/Add';
 const validationSchema = yup.object({
   subredditName: yup
     .string()
-    .required('Required')
+    .required('requerido')
     .max(20, 'Must be at most 20 characters')
     .min(3, 'Must be at least 3 characters')
     .matches(
@@ -26,7 +26,7 @@ const validationSchema = yup.object({
     ),
   description: yup
     .string()
-    .required('Required')
+    .required('requerido')
     .max(100, 'Must be at most 100 characters')
     .min(3, 'Must be at least 3 characters'),
 });
@@ -43,7 +43,7 @@ const SubForm = () => {
       await dispatch(addNewSub(values));
       setSubmitting(false);
       dispatch(
-        notify(`New subreddish created: r/${values.subredditName}`, 'success')
+        notify(`Nueva categoria creada: r/${values.subredditName}`, '...')
       );
       history.push(`/r/${values.subredditName}`);
     } catch (err) {
@@ -68,13 +68,13 @@ const SubForm = () => {
                 color="primary"
                 variant="h5"
               >
-                r/
+                
               </Typography>
               <TextInput
                 name="subredditName"
                 type="text"
-                placeholder="Enter name"
-                label="Subreddish Name"
+                placeholder="Ingresa el nombre"
+                label="Nombre de categoria"
                 required
                 fullWidth
               />
@@ -84,8 +84,8 @@ const SubForm = () => {
               <TextInput
                 name="description"
                 type="text"
-                placeholder="Enter description"
-                label="Description"
+                placeholder="Ingresa la descripcion"
+                label="Decripcion"
                 required
                 fullWidth
                 variant="outlined"
@@ -103,7 +103,7 @@ const SubForm = () => {
               disabled={isSubmitting}
               startIcon={<AddIcon />}
             >
-              {isSubmitting ? 'Creating' : 'Create Subreddish'}
+              {isSubmitting ? 'Creando' : 'Crear categoria'}
             </Button>
           </Form>
         )}

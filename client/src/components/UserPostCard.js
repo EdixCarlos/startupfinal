@@ -13,12 +13,13 @@ import getErrorMsg from '../utils/getErrorMsg';
 
 import { Paper, Typography, Link, Button } from '@material-ui/core';
 import { useUserPostCardStyles } from '../styles/muiStyles';
-
+import es from 'timeago.js/lib/lang/es';
+import * as timeago from 'timeago.js';
 const UserPostCard = ({ post, user, isMobile }) => {
   const classes = useUserPostCardStyles();
   const dispatch = useDispatch();
   const { darkMode } = useSelector((state) => state);
-
+  timeago.register('es', es);
   const {
     id,
     title,
@@ -123,10 +124,10 @@ const UserPostCard = ({ post, user, isMobile }) => {
             <Link component={RouterLink} to={`/u/${author.username}`}>
               {` u/${author.username} `}
             </Link>
-            • <TimeAgo datetime={new Date(createdAt)} />
+            • <TimeAgo datetime={new Date(createdAt)} locale='es'/>
             {createdAt !== updatedAt && (
               <em>
-                {' • edited'} <TimeAgo datetime={new Date(updatedAt)} />
+                {' • edited'} <TimeAgo datetime={new Date(updatedAt)} locale='es'/>
               </em>
             )}
           </Typography>

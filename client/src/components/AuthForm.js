@@ -57,7 +57,7 @@ const AuthForm = () => {
       setSubmitting(true);
       await dispatch(loginUser(values));
       dispatch(
-        notify(`Welcome, ${values.username}. You're logged in!`, 'success')
+        notify(`Bienvenido, ${values.username}. ¡Has iniciado sesión!`, 'éxito')
       );
     } catch (err) {
       setSubmitting(false);
@@ -71,8 +71,8 @@ const AuthForm = () => {
       await dispatch(signupUser(values));
       dispatch(
         notify(
-          `Welcome, ${values.username}. You've been successfully registered.`,
-          'success'
+          `Bienvenido, ${values.username}. Te has registrado correctamente.`,
+          'éxito'
         )
       );
     } catch (err) {
@@ -103,16 +103,16 @@ const AuthForm = () => {
                   className={classes.formTitle}
                 >
                   {authType === 'login'
-                    ? 'Login to your account'
-                    : 'Create a new account'}
+                    ? 'Ingrese a su cuenta'
+                    : 'Crea una cuenta nueva'}
                 </Typography>
                 <div className={classes.input}>
                   <PersonIcon className={classes.inputIcon} color="primary" />
                   <TextInput
                     name="username"
                     type="text"
-                    placeholder="Enter username"
-                    label="Username"
+                    placeholder="Introduzca su nombre de usuario"
+                    label="nombre de usuario"
                     required
                     fullWidth
                   />
@@ -122,8 +122,8 @@ const AuthForm = () => {
                   <TextInput
                     name="password"
                     type={showPass ? 'text' : 'password'}
-                    placeholder="Enter password"
-                    label="Password"
+                    placeholder="Introducir la contraseña"
+                    label="contraseña"
                     required
                     fullWidth
                     InputProps={{
@@ -158,11 +158,11 @@ const AuthForm = () => {
                 >
                   {authType === 'login'
                     ? isSubmitting
-                      ? 'Logging In'
-                      : 'Login'
+                      ? 'Iniciando sesión'
+                      : 'Entrar'
                     : isSubmitting
-                    ? 'Signing Up'
-                    : 'Sign Up'}
+                    ? 'Registrarse'
+                    : 'Registrarse'}
                 </Button>
               </Form>
               <Divider
@@ -177,8 +177,8 @@ const AuthForm = () => {
                   color="primary"
                 >
                   {authType === 'login'
-                    ? `Don't have an account?`
-                    : 'Already have an account?'}
+                    ? `¿No tienes una cuenta?`
+                    : '¿Ya tienes una cuenta  ?'}
                 </Typography>
                 <Button
                   onClick={() =>
@@ -195,7 +195,7 @@ const AuthForm = () => {
                   }
                   disabled={isSubmitting}
                 >
-                  {authType === 'login' ? 'Sign Up' : 'Login'}
+                  {authType === 'login' ? 'Registrarse' : 'Entrar'}
                 </Button>
               </div>
             </>

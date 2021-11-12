@@ -59,7 +59,7 @@ const AuthFormModal = ({ closeMobileMenu, type }) => {
         <MenuItem onClick={handleMobileMenu}>
           <ListItemIcon>
             <ExitToAppIcon style={{ marginRight: 7 }} />
-            Login/Register
+            Iniciar sesión / Registrarse
           </ListItemIcon>
         </MenuItem>
       ) : (
@@ -68,7 +68,7 @@ const AuthFormModal = ({ closeMobileMenu, type }) => {
           onClick={handleClickOpen}
           className={classesBtn.navButtons}
         >
-          Login/Register
+          Iniciar sesión / Registrarse
         </Button>
       )}
       <Dialog

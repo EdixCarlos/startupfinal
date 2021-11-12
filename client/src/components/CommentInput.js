@@ -33,19 +33,19 @@ const CommentInput = ({ user, postId, isMobile }) => {
     <div className={classes.wrapper}>
       {user ? (
         <Typography variant="body2">
-          Comment as{' '}
+          Comentar como{' '}
           <Link component={RouterLink} to={`/u/${user.username}`}>
             {user.username}
           </Link>
         </Typography>
       ) : (
         <Typography variant="body1">
-          Log in or sign up to leave a comment
+          Inicia sesión o crea una cuenta para dejar un comentario
         </Typography>
       )}
       <form className={classes.form} onSubmit={handlePostComment}>
         <TextField
-          placeholder={`What are your thoughts?`}
+          placeholder={`¿Cuáles son tus pensamientos?`}
           multiline
           fullWidth
           required
@@ -65,7 +65,7 @@ const CommentInput = ({ user, postId, isMobile }) => {
           size={isMobile ? 'small' : 'medium'}
           disabled={!user || submitting}
         >
-          {!user ? 'Login to comment' : submitting ? 'Commenting' : 'Comment'}
+          {!user ? 'Inicia sesión para comentar' : submitting ? 'Comentando' : 'Comentar'}
         </Button>
       </form>
     </div>

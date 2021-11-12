@@ -81,7 +81,7 @@ const AddPostForm = ({
       const postId = await dispatch(createNewPost(values));
       setSubmitting(false);
       history.push(`/comments/${postId}`);
-      dispatch(notify('Added new post!', 'success'));
+      dispatch(notify('Nueva publicación agregada!', 'Exitoso'));
     } catch (err) {
       setSubmitting(false);
       setError(getErrorMsg(err));
@@ -94,7 +94,7 @@ const AddPostForm = ({
       await dispatch(updatePost(postToEditId, values));
       setSubmitting(false);
       history.push(`/comments/${postToEditId}`);
-      dispatch(notify('Successfully updated the post!', 'success'));
+      dispatch(notify('Actualización exitosa de la publicación!', 'exitoso'));
     } catch (err) {
       setSubmitting(false);
       setError(getErrorMsg(err));
@@ -163,12 +163,12 @@ const AddPostForm = ({
                 color="primary"
                 variant="h5"
               >
-                r/
+                
               </Typography>
               <Autocomplete
                 name="subreddit"
                 onChange={(e, value) =>
-                  setFieldValue('categoria', value ? value.id : '')
+                  setFieldValue('subreddit', value ? value.id : '')
                 }
                 fullWidth
                 options={subs && subs.allSubs}
@@ -185,7 +185,7 @@ const AddPostForm = ({
                         ? 'Escoje una categoria'
                         : fromSubreddit.subredditName
                     }
-                    placeholder="Buscar por nombre"
+                    placeholder="Buscar por nobmre"
                     required
                     disabled={actionType === 'edit' || !!fromSubreddit}
                   />
@@ -197,7 +197,7 @@ const AddPostForm = ({
               <TextInput
                 name="title"
                 type="text"
-                placeholder="Agrega el titulo"
+                placeholder="Enter title"
                 label="Titulo"
                 required
                 fullWidth
@@ -209,9 +209,9 @@ const AddPostForm = ({
                 <ChatIcon className={classes.inputIcon} color="primary" />
                 <TextInput
                   name="textSubmission"
-                  placeholder={`Enter text (HTML supported. For ex, "<h1>Like this?</h1>")`}
+                  placeholder={`Ingresa texto (HTML Soportado. Por ejemplos, "<h1>Como esto?</h1>")`}
                   multiline
-                  label="Text"
+                  label="Texto"
                   required={values.postType === 'Text'}
                   fullWidth
                   variant="outlined"
@@ -250,7 +250,7 @@ const AddPostForm = ({
                   >
                     {values.imageSubmission
                       ? `${isMobile ? '' : 'Seleccionado '}"${fileName}"`
-                      : `Selecciona una imagen`}
+                      : `Seleccionar imagen`}
                   </Button>
                   {values.imageSubmission && (
                     <IconButton
@@ -280,7 +280,7 @@ const AddPostForm = ({
                 <TextInput
                   name="linkSubmission"
                   type="text"
-                  placeholder="Enter URL"
+                  placeholder="Introducir URL"
                   label="Link"
                   required={values.postType === 'Link'}
                   fullWidth
@@ -300,7 +300,7 @@ const AddPostForm = ({
               {postToEditId
                 ? isSubmitting
                   ? 'Actualizando'
-                  : 'Actualizar'
+                  : 'Actualziar'
                 : isSubmitting
                 ? 'Publicando'
                 : 'Publicar'}

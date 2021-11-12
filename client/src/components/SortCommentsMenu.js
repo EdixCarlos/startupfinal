@@ -20,33 +20,33 @@ const SortCommentsMenu = () => {
     <div className={classes.root}>
       <Typography variant="button" className={classes.label}>
         <SortIcon style={{ marginRight: '8px' }} color="primary" />
-        Sort By
+        Buscar por
       </Typography>
       <form>
         <Select value={sortBy}>
           <MenuItem value="old" onClick={() => handleSortComments('old')}>
-            Old
+            Antiguos
           </MenuItem>
           <MenuItem value="new" onClick={() => handleSortComments('new')}>
-            New
+            Nuevo
           </MenuItem>
           <MenuItem
             value="upvoted"
             onClick={() => handleSortComments('upvoted')}
           >
-            Most Upvoted
+           Mas votado
           </MenuItem>
           <MenuItem
             value="downvoted"
             onClick={() => handleSortComments('downvoted')}
           >
-            Most Downvoted
+            Menos votado
           </MenuItem>
           <MenuItem
             value="replied"
             onClick={() => handleSortComments('replied')}
           >
-            Most Replied
+            Mas controversial
           </MenuItem>
         </Select>
       </form>
