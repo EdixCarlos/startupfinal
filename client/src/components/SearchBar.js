@@ -29,7 +29,7 @@ const SearchBar = ({ isMobile, setSearchOpen }) => {
       <form onSubmit={handleSearch}>
         <TextField
           type="search"
-          placeholder="Search for posts…"
+          placeholder="Buscar publicaciones…"
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
           className={classes.inputField}

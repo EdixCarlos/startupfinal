@@ -15,10 +15,10 @@ const NotFoundPage = () => {
             <Error404 />
           </SvgIcon>
           <Typography color="secondary" variant="h4">
-            Page Not Found
+          Página no encontrada
           </Typography>
           <Typography color="secondary" variant="h6">
-            The page you requested does not exist
+          La página solicitada no existe
           </Typography>
         </div>
       </Paper>

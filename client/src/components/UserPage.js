@@ -146,10 +146,10 @@ const UserPage = () => {
               </div>
               <div className={classes.twoItemsDiv}>
                 <Typography variant="body1" color="secondary">
-                  Puntos por publicaciones <strong>{karmaPoints.postKarma}</strong>
+                  Puntos por publicaciones: <strong>{karmaPoints.postKarma}</strong>
                 </Typography>
                 <Typography variant="body1" color="secondary">
-                  Puntos por comentarios<strong>{karmaPoints.commentKarma}</strong>
+                  Puntos por comentarios: <strong>{karmaPoints.commentKarma}</strong>
                 </Typography>
               </div>
             </div>

@@ -50,7 +50,7 @@ const NavBar = () => {
                   startIcon={<Icon fontSize="large" />}
                   size="large"
                 >
-                  Photography
+                  PictureMoments
                 </Button>
                 
                 {/* <Typography variant="caption" color="secondary">
